@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ range .Pages.ByPublishDate.Reverse }}
+{{ range .Paginator.Pages.ByPublishDate.Reverse }}
 
 {{ $dateTime := .PublishDate.Format "2019-12-30" }}
 {{ $dateFormat := .Site.Params.dateFormat | default "2019-12-30" }}
@@ -12,10 +12,7 @@
 
         <img src="{{ with .Params.image }}{{ . }}{{ end }}" />
         {{ .Summary }}
-</div><!-- /.blog-post -->
-
-
-
+      </div><!-- /.blog-post -->
 {{ end }}
 {{- partial "pagination.html" . -}}
 {{ end }}
