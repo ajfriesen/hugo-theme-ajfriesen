@@ -1,13 +1,9 @@
- {{/* <nav class="blog-pagination">
-    <a class="btn btn-outline-primary" href="#">Older</a>
-    <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
-</nav> */}}
-
  <nav class="blog-pagination">
-{{ if .Paginator.HasPrev }}
-    <a class="btn btn-outline-primary" href="{{ .Paginator.Prev.URL }}">Older</a>
-{{ end }}
-{{ if .Paginator.HasNext }}
-    <a class="btn btn-outline-secondary" href="{{ .Paginator.Next.URL }}" tabindex="-1">Newer</a>
-{{ end }}
+    {{ if .Paginator.HasPrev }}
+        <a class="btn btn-outline-primary" href="{{ .Paginator.Prev.URL }}">Older</a>
+    {{ end }}
+
+    {{ if .Paginator.HasNext }}
+        <a class="btn btn-outline-secondary" href="{{ .Paginator.Next.URL }}" tabindex="-1">Newer</a>
+    {{ end }}
 </nav>
