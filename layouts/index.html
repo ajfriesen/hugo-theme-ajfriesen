@@ -20,7 +20,7 @@
         Aus dem Blog
       </h3>
       <div class="blog-post">
-      {{ range first 3  (where .Site.RegularPages "Section" "posts")}}
+      {{ range first 3  (where .Site.RegularPages.Reverse "Section" "posts")}}
         {{ $dateTime := .PublishDate.Format "2019-12-30" }}
         {{ $dateFormat := .Site.Params.dateFormat | default "2019-12-30" }}
           <h2 class="blog-post-title">{{ .Page.Title }}</h2>
