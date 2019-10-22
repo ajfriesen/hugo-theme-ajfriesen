@@ -1,14 +1,13 @@
 {{ define "main" }}
+
 {{ range .Paginator.Pages.ByPublishDate.Reverse }}
 
-{{ $dateTime := .PublishDate.Format "2019-12-30" }}
-{{ $dateFormat := .Site.Params.dateFormat | default "2019-12-30" }}
 
 <div class="blog-post">
         <h2 class="blog-post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
 
             
-        <p class="blog-post-meta">{{ .PublishDate.Format $dateFormat }} by <a href="#">{{ .Params.author }}</a></p>
+        <p class="blog-post-meta">{{ .PublishDate.Format "2.1.2006" }} by <a href="#">{{ .Params.author }}</a></p>
 
         <img src="{{ with .Params.image }}{{ . }}{{ end }}" />
         {{ .Summary }}
