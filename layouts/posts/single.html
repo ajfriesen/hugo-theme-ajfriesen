@@ -1,0 +1,14 @@
+{{ define "main" }}
+
+{{ $dateTime := .PublishDate.Format "2019-12-30" }}
+{{ $dateFormat := .Site.Params.dateFormat | default "2019-12-30" }}
+
+<div class="blog-post">
+        <h2 class="blog-post-title">{{ .Title}}</h2>
+        <p class="blog-post-meta">{{ .PublishDate.Format $dateFormat }} <a href=""></a>{{ .Params.Author }}</p>
+
+        {{ .Content }}
+        
+      </div><!-- page -->
+
+{{ end }}
