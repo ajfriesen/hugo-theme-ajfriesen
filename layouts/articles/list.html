@@ -4,10 +4,10 @@
 
 
 <div class="blog-post">
-        <h2 class="blog-post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <h2 class="blog-post-title"><a href="{{ .RelPermalink }}" class="text-dark">{{ .Title }}</a></h2>
 
             
-        <p class="blog-post-meta">{{ .PublishDate.Format "2.1.2006" }} by <a href="#">{{ .Params.author }}</a></p>
+        <p class="blog-post-meta">{{ .PublishDate.Format "2.1.2006" }} von {{ .Params.author }}</p>
 
         <img src="{{ with .Params.image }}{{ . }}{{ end }}" />
         {{ .Summary }}

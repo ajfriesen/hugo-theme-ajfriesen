@@ -18,14 +18,14 @@
   <div class="row">
     <div class="col-md-8 blog-main">
       <h3 class="pb-4 mb-4 font-italic border-bottom">
-        Aus dem Blog
+        <a href="posts" class="text-secondary">Aus dem Blog</a>
       </h3>
       <div class="blog-post">
       {{ range first 3  (where .Site.RegularPages.Reverse "Section" "posts")}}
         {{ $dateTime := .PublishDate.Format "2019-12-30" }}
         {{ $dateFormat := .Site.Params.dateFormat | default "2019-12-30" }}
-          <h2 class="blog-post-title">{{ .Page.Title }}</h2>
-          <p class="blog-post-meta">{{ .PublishDate.Format $dateFormat }} by <a href="#">{{ .Params.author }}</a></p>
+          <h2 class="blog-post-title"><a href="{{ .RelPermalink }}" class="text-dark">{{ .Title }}</a></h2>
+          <p class="blog-post-meta">{{ .PublishDate.Format $dateFormat }} von {{ .Params.author }}</p>
         {{ .Summary }}
       {{ end }}
       </div>
