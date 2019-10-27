@@ -23,3 +23,4 @@ This is a Hugo Theme for the german website [https:technik-tip.de](https:technik
 ## Resources
 
 - Google Font URL: https://fonts.googleapis.com/css?family=Playfair+Display:700,900
+- Cookie Banner https://cookieconsent.osano.com/
