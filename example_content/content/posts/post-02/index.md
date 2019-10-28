@@ -1,6 +1,5 @@
 ---
 title: "Post 02"
-categories: ["Category"]
 image: "featured.jpg"
 date: 2019-01-15T20:56:21+01:00
 draft: true
