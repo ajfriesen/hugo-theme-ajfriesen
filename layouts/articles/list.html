@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-{{ range .Paginator.Pages.ByPublishDate.Reverse }}
+{{ range (.Paginate ( .Pages.ByDate.Reverse )).Pages }}
 
 <div class="blog-post">
         <h2 class="blog-post-title"><a href="{{ .RelPermalink }}" class="text-dark">{{ .Title }}</a></h2>
