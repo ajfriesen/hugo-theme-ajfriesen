@@ -1,0 +1,26 @@
+baseURL = "example.com"
+languageCode = "de-de"
+title = "My Awesome Project"
+paginate = 1
+
+googleAnalytics = "XX-123456789-0"
+
+
+[module]
+  [[module.imports]]
+    path = "github.com/ajfriesen/hugo-theme-ajfriesen"
+    # path = "../../hugo-theme-ajfriesen"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  author = "authors"
+
+
+[params]
+  dateFormat = "2.1.2006"
+  Author = "Your Name"
+  googleAnalyticsTrackingCode = "XX-123456789-0"
+
+[permalinks]
+    page = "/:slug/"
