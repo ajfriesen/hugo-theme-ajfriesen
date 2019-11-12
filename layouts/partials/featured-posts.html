@@ -10,10 +10,10 @@
           <p class="card-text mb-auto">{{ .Summary | truncate 120 }}</p>
           <a href="{{ .RelPermalink }}" class="stretched-link">Weiterlesen...</a>
         </div>
-        <div class="col-auto d-none d-lg-block">
+        {{/*        <div class="col-auto d-none d-lg-block">
           <img src="{{ $test }}{{ .Dir }}{{.Params.Image}}" class="bd-placeholder-img" width="200" height="250" alt="asdf"></img>
           
-        </div>
+        </div>*/}}
       </div>
     </div>
     {{ end }}
@@ -30,9 +30,9 @@
           <p class="mb-auto">{{ .Summary | truncate 120 }}</p>
           <a href="{{ .RelPermalink }}" class="stretched-link">Weiterlesen...</a>
         </div>
-        <div class="col-auto d-none d-lg-block">
+        {{/*  <div class="col-auto d-none d-lg-block">
           <img src="{{ $test }}{{ .Dir }}{{.Params.Image}}" class="bd-placeholder-img" width="200" height="250" alt="asdf"></img>
-        </div>
+        </div>*/}}
       </div>
     </div>
 
