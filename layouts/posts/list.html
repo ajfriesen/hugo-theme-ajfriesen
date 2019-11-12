@@ -1,0 +1,22 @@
+{{ define "main" }}
+{{ range (.Paginate ( .Pages.ByDate.Reverse )).Pages }}
+
+<div class="blog-post">
+        <h2 class="blog-post-title"><a href="{{ .RelPermalink }}" class="text-dark">{{ .Title }}</a></h2>
+
+        <p class="blog-post-meta">{{ .PublishDate.Format "2.1.2006" }} von {{ .Params.author }}</p>
+
+        {{/* 
+        {{ $page :=.RelPermalink }}
+        {{ with .Params.image}}
+        <img src="{{ $page }}{{ . }}"/>
+        {{end}}
+        */}}
+        {{ .Summary }}
+</div><!-- /.blog-post -->
+
+
+
+{{ end }}
+{{ template "_internal/pagination.html" . }}
+{{ end }}
