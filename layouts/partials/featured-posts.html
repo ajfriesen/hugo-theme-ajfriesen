@@ -7,7 +7,7 @@
           {{/* <strong class="d-inline-block mb-2 text-primary">{{ .Params.Categories }}</strong> */}}
           <h3 class="mb-0">{{ .Title }}</h3>
           {{/* <div class="mb-1 text-muted">{{ .Date }}</div> */}}
-          <p class="card-text mb-auto">{{ .Summary | truncate 80 }}</p>
+          <p class="card-text mb-auto">{{ .Summary | truncate 120 }}</p>
           <a href="{{ .RelPermalink }}" class="stretched-link">Weiterlesen...</a>
         </div>
         <div class="col-auto d-none d-lg-block">
@@ -27,7 +27,7 @@
           {{/* <strong class="d-inline-block mb-2 text-success">{{ .Params.Categories }}</strong> */}}
           <h3 class="mb-0">{{ .Title }}</h3>
           {{/* <div class="mb-1 text-muted">{{ .Date }}</div> */}}
-          <p class="mb-auto">{{ .Summary | truncate 80 }}</p>
+          <p class="mb-auto">{{ .Summary | truncate 120 }}</p>
           <a href="{{ .RelPermalink }}" class="stretched-link">Weiterlesen...</a>
         </div>
         <div class="col-auto d-none d-lg-block">
